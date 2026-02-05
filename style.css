@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+  /* ป้องกันภาพใหญ่เกินไป */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block; /* จัดการพื้นที่สำหรับ layout disply block = ขึ้นบรรทัดใหม่ ไม่วางต่อใน line เดียวกันแบบ inline */
+}
