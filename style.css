@@ -161,7 +161,7 @@
 
     .topnav__link {
       font-size: var(--font-size-topnav);
-      font-weight: 700;
+      font-weight: 900;
       letter-spacing: 0.05em; /*0.05 คือ 5%*/
       text-transform: uppercase;
       color: var(--color-text-light);
