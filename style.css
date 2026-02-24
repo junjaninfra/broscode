@@ -103,6 +103,7 @@
   picture,
   svg {
     max-width: 100%;
+    height: auto;
     display: block; /* จัดการพื้นที่สำหรับ layout disply block = ขึ้นบรรทัดใหม่ ไม่วางต่อใน line เดียวกันแบบ inline */
   }
 
@@ -119,15 +120,40 @@
 @layer component {
   .topnav {
     background-color: var(--color-header-bg);
+    .topnav__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 12px;
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        padding-block: 20px;
+      }
+    }
+
     .topnav__homelink {
+      &:hover {
+        opacity: 0.9;
+      }
     }
 
     .topnav__logo {
+      width: calc(70 / 16 * 1rem);
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        width: calc(128 / 16 * 1rem);
+      }
     }
 
     .topnav__links {
+      display: flex;
+      gap: 20px;
       list-style-type: none;
       padding: 0;
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        gap: 40px;
+      }
     }
 
     .topnav__item {
@@ -139,6 +165,11 @@
       letter-spacing: 0.05em; /*0.05 คือ 5%*/
       text-transform: uppercase;
       color: var(--color-text-light);
+
+      &:hover {
+        text-decoration: underline 2px;
+        text-underline-offset: 4px;
+      }
     }
   }
 }
